@@ -8,7 +8,7 @@ Feature: Free CRM Create Contacts
     And Click on new
     And Enter contact details "<firstname>" and "<lastname>"
     Then Click on save
-    Then Verify
+    Then Verify the entry
     Then Close the browser
 
     Examples:
