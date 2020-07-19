@@ -7,8 +7,10 @@ import cucumber.api.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "Features",
-        glue = {"stepDefinitions"}
-      //  format = {"pretty", "html:test-outout"}
+        glue = {"stepDefinitions"},
+        monochrome = true,
+        dryRun = false
+
 
 )
 
