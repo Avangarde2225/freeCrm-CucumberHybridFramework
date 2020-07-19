@@ -16,4 +16,6 @@ public class AbstractClass {
         wait.until(ExpectedConditions.elementToBeClickable(clickElement));
         clickElement.click();
     }
+
+
 }
