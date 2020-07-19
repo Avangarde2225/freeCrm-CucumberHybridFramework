@@ -9,7 +9,7 @@ import cucumber.api.CucumberOptions;
         features = "Features",
         glue = {"stepDefinitions"},
         monochrome = true,
-        dryRun = false
+        dryRun = true
 
 
 )

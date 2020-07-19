@@ -28,10 +28,10 @@ public class loginStepDefinitions {
         Assert.assertEquals("Cogmento CRM",title);
     }
 
-    @Then("^User enters username and password$")
-    public void user_enters_username_and_password() throws Throwable {
-            driver.findElement(By.xpath("//*[@placeholder='E-mail address']")).sendKeys("rrzbhlxhkzwacrpnme@awdrt.org");
-            driver.findElement(By.xpath("//*[@placeholder='Password']")).sendKeys("Test@123");
+    @Then("^User enters \"(.*)\" and \"(.*)\"$")
+    public void user_enters_username_and_password(String username, String password)  {
+            driver.findElement(By.xpath("//*[@placeholder='E-mail address']")).sendKeys(username);
+            driver.findElement(By.xpath("//*[@placeholder='Password']")).sendKeys(password);
     }
 
     @Then("^User clicks on login button$")
