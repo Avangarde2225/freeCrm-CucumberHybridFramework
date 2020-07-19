@@ -6,4 +6,4 @@ Feature: Free CRM Login Feature
     When Title of Login Pages is Free CRM
     Then User enters username and password
     Then User clicks on login button
-    And User is on home page
+    Then User is on home page
