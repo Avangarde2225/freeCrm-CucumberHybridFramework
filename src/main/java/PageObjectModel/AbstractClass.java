@@ -16,6 +16,10 @@ public class AbstractClass {
         wait.until(ExpectedConditions.elementToBeClickable(clickElement));
         clickElement.click();
     }
+    public void sendKeys(WebElement sendKeysElement, String value){
+        wait.until(ExpectedConditions.visibilityOf(sendKeysElement));
+        sendKeysElement.sendKeys(value);
+    }
 
 
 }
