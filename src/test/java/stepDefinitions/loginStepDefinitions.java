@@ -50,4 +50,9 @@ public class loginStepDefinitions {
         Assert.assertEquals("https://ui.cogmento.com/", url);
 
     }
+
+    @Then("^Close the browser$")
+    public void close_the_browser() throws Throwable {
+       driver.quit();
+    }
 }

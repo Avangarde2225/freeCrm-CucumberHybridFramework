@@ -17,6 +17,7 @@ Feature: Free CRM Login Feature Test
     Then User enters "<username>" and "<password>"
     Then User clicks on login button
     Then User is on home page
+    Then Close the browser
 
     Examples:
     |username                     | password |
