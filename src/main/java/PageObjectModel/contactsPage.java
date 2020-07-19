@@ -16,10 +16,19 @@ public class contactsPage extends AbstractClass {
 
     @FindBy(xpath = "//button[contains(text(),'New')]")
     private WebElement clickOnNew;
-
     public void setClickOnNew(){clickFunction(clickOnNew);}
 
+    @FindBy(xpath = "//input[@name='first_name']")
+    private WebElement enterFirstName;
+    public void enterFname(String fName){sendKeys(enterFirstName,fName);}
 
+    @FindBy(xpath = "//input[@name='last_name']")
+    private WebElement enterLastName;
+    public void enterLname(String Lname){sendKeys(enterLastName,Lname);}
+
+    @FindBy(xpath = "//button[contains(text(),'Save')]")
+    private WebElement clickOnSave;
+    public void setClickOnSave(){clickFunction(clickOnSave);}
 
 
 

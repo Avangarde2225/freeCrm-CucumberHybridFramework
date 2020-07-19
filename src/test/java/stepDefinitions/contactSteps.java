@@ -54,23 +54,21 @@ public class contactSteps {
     }
 
     @And("^Enter contact details \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void enter_contact_details_and(String arg1, String arg2) throws Throwable {
-
+    public void enter_contact_details_and(String firstName, String lastName) throws Throwable {
+    cp.enterFname(firstName);
+    cp.enterLname(lastName);
     }
 
     @Then("^Click on save$")
     public void click_on_save() throws Throwable {
 
-    }
-
-    @Then("^Verify the entry$")
-    public void verify_the_entry() throws Throwable {
 
     }
+
 
     @Then("^Close the browser$")
     public void close_the_browser() throws Throwable {
-
+    driver.quit();
     }
 
 
