@@ -9,16 +9,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import utilities.Driver;
+import utilities.ReadProperties;
+
+import java.util.concurrent.TimeUnit;
 
 public class loginStepDefinitions {
     WebDriver driver;
+
 
     @Given("^User is on the Login Page$")
     public void user_is_on_the_Login_Page() throws Throwable {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe");
 
-        driver = new ChromeDriver();
-        driver.get("https://ui.cogmento.com/");
+        driver = Driver.getDriver();
+
+        driver.get(ReadProperties.getData("URL"));
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+
     }
 
     @When("^Title of Login Pages is Free CRM$")
@@ -28,16 +38,21 @@ public class loginStepDefinitions {
         Assert.assertEquals("Cogmento CRM",title);
     }
 
-    @Then("^User enters \"(.*)\" and \"(.*)\"$")
-    public void user_enters_username_and_password(String username, String password)  {
-            driver.findElement(By.xpath("//*[@placeholder='E-mail address']")).sendKeys(username);
-            driver.findElement(By.xpath("//*[@placeholder='Password']")).sendKeys(password);
+    @Then("^User enters Username and Password$")
+    public void user_enters_Username_and_Password(String username, String password) throws Throwable {
+        driver.findElement(By.xpath("//*[@placeholder='E-mail address']")).sendKeys(username);
+        driver.findElement(By.xpath("//*[@placeholder='Password']")).sendKeys(password);
     }
+
+
 
     @Then("^User clicks on login button$")
     public void user_clicks_on_login_button() throws Throwable {
         WebElement loginBtn = driver.findElement(By.xpath("//html//body//div//div//div//form//div//div[contains(text(),'Login')]"));
         loginBtn.click();
+
+        Thread.sleep(5000);
+
 
         //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        js.executeScript("argument[0].click();", loginBtn);
