@@ -18,34 +18,36 @@ public class loginStepDefinitions {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\suler\\Desktop\\Selenium\\chromedriver\\chromedriver.exe");
 
         driver = new ChromeDriver();
-        driver.get("https://classic.freecrm.com/index.html?e=1");
+        driver.get("https://ui.cogmento.com/");
     }
 
     @When("^Title of Login Pages is Free CRM$")
     public void title_of_Login_Pages_is_Free_CRM() throws Throwable {
         String title = driver.getTitle();
         System.out.println(title);
-        Assert.assertEquals("Free CRM software can boost your sales by 30%",title);
+        Assert.assertEquals("Cogmento CRM",title);
     }
 
     @Then("^User enters username and password$")
     public void user_enters_username_and_password() throws Throwable {
-            driver.findElement(By.name("username")).sendKeys("navennk");
-            driver.findElement(By.name("password")).sendKeys("test@123");
+            driver.findElement(By.xpath("//*[@placeholder='E-mail address']")).sendKeys("rrzbhlxhkzwacrpnme@awdrt.org");
+            driver.findElement(By.xpath("//*[@placeholder='Password']")).sendKeys("Test@123");
     }
 
     @Then("^User clicks on login button$")
     public void user_clicks_on_login_button() throws Throwable {
-        WebElement loginBtn = driver.findElement(By.xpath("//input[@type='submit']"));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("argument[0].click();", loginBtn);
+        WebElement loginBtn = driver.findElement(By.xpath("//html//body//div//div//div//form//div//div[contains(text(),'Login')]"));
+        loginBtn.click();
+
+        //        JavascriptExecutor js = (JavascriptExecutor) driver;
+//        js.executeScript("argument[0].click();", loginBtn);
     }
 
     @Then("^User is on home page$")
     public void user_is_on_home_page() throws Throwable {
-        String title2= driver.getTitle();
-        System.out.println("Homepage title is " + title2);
-        Assert.assertEquals("CRMPRO", title2);
+        String url= driver.getCurrentUrl();
+        System.out.println("Homepage title is " + url);
+        Assert.assertEquals("https://ui.cogmento.com/", url);
 
     }
 }
