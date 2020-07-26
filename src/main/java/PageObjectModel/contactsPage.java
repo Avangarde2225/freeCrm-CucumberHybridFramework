@@ -15,7 +15,6 @@ public class contactsPage extends AbstractClass {
     }
 
 
-
     @FindBy(xpath = "//input[@name='first_name']")
     private WebElement enterFirstName;
     public void enterFname(String fName){sendKeys(enterFirstName,fName);}

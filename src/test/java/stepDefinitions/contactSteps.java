@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 
+import PageObjectModel.applicationPage;
 import PageObjectModel.contactsPage;
 import PageObjectModel.leftNav;
 import PageObjectModel.logInPage;
@@ -24,6 +25,7 @@ public class contactSteps {
     logInPage lp = new logInPage();
     leftNav lv = new leftNav();
     contactsPage cp = new contactsPage();
+    applicationPage ap = new applicationPage();
 
 
     @Given("^Go to the CRM page$")
@@ -50,7 +52,7 @@ public class contactSteps {
 
     @And("^Click on new$")
     public void click_on_new() throws Throwable {
-        cp.setClickOnNew();
+        ap.setClickOnNew();
     }
 
     @And("^Enter contact details \"([^\"]*)\" and \"([^\"]*)\"$")
@@ -61,7 +63,7 @@ public class contactSteps {
 
     @Then("^Click on save$")
     public void click_on_save() throws Throwable {
-
+    ap.setClickOnSave();
 
     }
 
