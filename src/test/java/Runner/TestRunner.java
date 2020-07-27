@@ -1,6 +1,7 @@
 package Runner;
 
 import cucumber.api.junit.Cucumber;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 
@@ -11,16 +12,16 @@ import cucumber.api.CucumberOptions;
                 "json:target/cucumber.json"
         },
 
-        tags = {"@SmokeTest"},
+        tags = "@SmokeTest",
 
-        features = "src/test/java/resources",
+        features = {"src/test/resources"},
         glue = {"stepDefinitions"},
         monochrome = true,
-        dryRun = true
+        dryRun = false
 
 
 )
 
-public class TestRunner {
+public class TestRunner extends AbstractTestNGCucumberTests {
 
 }

@@ -15,10 +15,6 @@ public class applicationPage extends AbstractClass{
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(xpath = "//button[contains(text(),'New')]")
-    private WebElement clickOnNew;
-    public void setClickOnNew(){clickFunction(clickOnNew); }
-
     @FindBy(xpath = "//button[@class='ui linkedin button']")
     private WebElement clickOnSave;
     public void setClickOnSave(){clickFunction(clickOnSave);}

@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class leftNav extends AbstractClass{
+public class tabs extends AbstractClass{
     private WebDriver driver;
 
-    public leftNav() {
+    public tabs() {
         driver = Driver.getDriver();
         PageFactory.initElements(driver, this);
     }

@@ -1,22 +1,22 @@
 package stepDefinitions;
 
 import PageObjectModel.*;
-import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 
 public class companiesSteps {
     WebDriver driver;
-    leftNav lv = new leftNav();
+    tabs lv = new tabs();
     applicationPage ap = new applicationPage();
     companiesPage cp = new companiesPage();
 
-    @Given("^Click on companies$")
-    public void click_on_companies() {
-       lv.setClickOnCompanies();
+    @Then("^Click on new company$")
+    public void click_on_new_company()  {
+
     }
 
-    @Given("^Enter company details \"([^\"]*)\"$")
-    public void enter_company_details(String name)  {
-    cp.enteringCompany(name);
+    @Then("^Enter company details \"([^\"]*)\"$")
+    public void enter_company_details(String arg1)  {
+
     }
 }

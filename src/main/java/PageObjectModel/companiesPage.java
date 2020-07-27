@@ -14,7 +14,13 @@ public class companiesPage extends AbstractClass{
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//div[@class='ui right corner labeled input']//input[@name='name']")
+  @FindBy(xpath = "//a[contains(text(),'New Company')]")
+  private WebElement hoverOverCompanies;
+
+
+
+
+    @FindBy(xpath = "//input[@id='company_name']")
     private WebElement enterCompanyName;
 
     public void enteringCompany(String name){sendKeys(enterCompanyName,name);}

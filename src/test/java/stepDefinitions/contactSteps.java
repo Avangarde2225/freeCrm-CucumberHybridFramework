@@ -3,17 +3,13 @@ package stepDefinitions;
 
 import PageObjectModel.applicationPage;
 import PageObjectModel.contactsPage;
-import PageObjectModel.leftNav;
+import PageObjectModel.tabs;
 import PageObjectModel.logInPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import cucumber.api.java.en.Then;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import utilities.Driver;
 import utilities.ReadProperties;
 
@@ -23,7 +19,7 @@ public class contactSteps {
 
     WebDriver driver;
     logInPage lp = new logInPage();
-    leftNav lv = new leftNav();
+    tabs lv = new tabs();
     contactsPage cp = new contactsPage();
     applicationPage ap = new applicationPage();
 
@@ -52,8 +48,7 @@ public class contactSteps {
 
     @And("^Click on new$")
     public void click_on_new() throws Throwable {
-        ap.setClickOnNew();
-        Thread.sleep(2000);
+
     }
 
     @And("^Enter contact details \"([^\"]*)\" and \"([^\"]*)\"$")
