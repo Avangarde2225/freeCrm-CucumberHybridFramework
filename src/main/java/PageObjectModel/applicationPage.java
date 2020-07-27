@@ -17,9 +17,9 @@ public class applicationPage extends AbstractClass{
 
     @FindBy(xpath = "//button[contains(text(),'New')]")
     private WebElement clickOnNew;
-    public void setClickOnNew(){clickFunction(clickOnNew);}
+    public void setClickOnNew(){clickFunction(clickOnNew); }
 
-    @FindBy(xpath = "//button[contains(text(),'Save')]")
+    @FindBy(xpath = "//i[@class='save icon']")
     private WebElement clickOnSave;
     public void setClickOnSave(){clickFunction(clickOnSave);}
 }

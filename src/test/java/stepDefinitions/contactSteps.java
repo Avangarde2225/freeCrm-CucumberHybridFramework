@@ -53,12 +53,14 @@ public class contactSteps {
     @And("^Click on new$")
     public void click_on_new() throws Throwable {
         ap.setClickOnNew();
+        Thread.sleep(2000);
     }
 
     @And("^Enter contact details \"([^\"]*)\" and \"([^\"]*)\"$")
     public void enter_contact_details_and(String firstName, String lastName) throws Throwable {
     cp.enterFname(firstName);
     cp.enterLname(lastName);
+    Thread.sleep(2000);
     }
 
     @Then("^Click on save$")
