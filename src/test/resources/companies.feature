@@ -1,5 +1,5 @@
 Feature: Create Company
-
+@SmokeTest
   Scenario Outline: Creating Company in the system
 
     Given Go to the CRM page
@@ -7,7 +7,7 @@ Feature: Create Company
     And Click on companies
     And Click on new
     And Enter company details "<name>"
-    Then Click on save
+    Then Click on save button
     Then Close the browser
 
     Examples:

@@ -11,9 +11,9 @@ import cucumber.api.CucumberOptions;
                 "json:target/cucumber.json"
         },
 
-        tags = "@SmokeTest",
+        tags = {"@SmokeTest"},
 
-        features = "Features",
+        features = "src/test/java/resources",
         glue = {"stepDefinitions"},
         monochrome = true,
         dryRun = true

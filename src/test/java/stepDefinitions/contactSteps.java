@@ -63,7 +63,7 @@ public class contactSteps {
     Thread.sleep(2000);
     }
 
-    @Then("^Click on save$")
+    @Then("^Click on save button$")
     public void click_on_save() throws Throwable {
     ap.setClickOnSave();
 

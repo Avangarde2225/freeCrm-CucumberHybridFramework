@@ -19,7 +19,7 @@ public class applicationPage extends AbstractClass{
     private WebElement clickOnNew;
     public void setClickOnNew(){clickFunction(clickOnNew); }
 
-    @FindBy(xpath = "//i[@class='save icon']")
+    @FindBy(xpath = "//button[@class='ui linkedin button']")
     private WebElement clickOnSave;
     public void setClickOnSave(){clickFunction(clickOnSave);}
 }

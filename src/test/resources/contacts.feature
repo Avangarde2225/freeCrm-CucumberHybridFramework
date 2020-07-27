@@ -1,5 +1,5 @@
 Feature: Free CRM Create Contacts
-
+@SmokeTest
   Scenario Outline: Free CRM Create a new contact scenario
 
     Given Go to the CRM page
@@ -7,7 +7,7 @@ Feature: Free CRM Create Contacts
     And Click on contacts
     And Click on new
     And Enter contact details "<firstname>" and "<lastname>"
-    Then Click on save
+    Then Click on save button
     Then Close the browser
 
     Examples:
