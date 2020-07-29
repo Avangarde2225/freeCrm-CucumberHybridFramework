@@ -16,21 +16,21 @@ public class logInPage extends AbstractClass{
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(xpath ="//*[@placeholder='E-mail address']")
+    @FindBy(xpath ="//input[@placeholder='Username']")
     private WebElement inputUserName;
 
     public void typeInInputUserName(){
         sendKeys(inputUserName, ReadProperties.getData("Username"));
     }
 
-    @FindBy(xpath="//*[@placeholder='Password']")
+    @FindBy(xpath="//input[@placeholder='Password']")
     private WebElement inputPassword;
 
     public void typeInInputPassword(){
         sendKeys(inputPassword,ReadProperties.getData("Password"));
     }
 
-    @FindBy(xpath="//html//body//div//div//div//form//div//div[contains(text(),'Login')]")
+    @FindBy(xpath="//input[@class='btn btn-small']")
     private WebElement buttonLogin;
 
     public void clickOnbuttonLogin(){

@@ -28,7 +28,7 @@ public class contactSteps {
     public void go_to_the_CRM_page() throws Throwable {
         driver = Driver.getDriver();
 
-        driver.get(ReadProperties.getData("URL"));
+        driver.get(ReadProperties.getData("Url"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }

@@ -22,6 +22,6 @@ import cucumber.api.CucumberOptions;
 
 )
 
-public class TestRunner extends AbstractTestNGCucumberTests {
+public class SmokeTestRunner extends AbstractTestNGCucumberTests {
 
 }

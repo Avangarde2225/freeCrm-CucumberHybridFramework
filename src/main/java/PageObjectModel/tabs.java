@@ -13,14 +13,15 @@ public class tabs extends AbstractClass{
         driver = Driver.getDriver();
         PageFactory.initElements(driver, this);
     }
+    @FindBy(xpath = "//span[contains(text(),'Companies')]")
+    private WebElement clickOnCompanies;
+    public void setClickOnCompanies(){clickFunction(clickOnCompanies);}
 
     @FindBy(xpath = "//span[contains(text(),'Contacts')]")
     private WebElement clickOnContacts;
     public void setClickOnContacts(){clickFunction(clickOnContacts);}
 
-    @FindBy(xpath = "//span[contains(text(),'Companies')]")
-    private WebElement clickOnCompanies;
-    public void setClickOnCompanies(){clickFunction(clickOnCompanies);}
+
 
     @FindBy(xpath = "//span[contains(text(),'Deals')]")
     private WebElement clickOnDeals;

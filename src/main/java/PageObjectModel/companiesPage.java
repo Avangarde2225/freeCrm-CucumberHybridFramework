@@ -1,12 +1,14 @@
 package PageObjectModel;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class companiesPage extends AbstractClass{
+public class companiesPage extends AbstractClass {
     private WebDriver driver;
 
     public companiesPage() {
@@ -14,14 +16,17 @@ public class companiesPage extends AbstractClass{
         PageFactory.initElements(driver, this);
     }
 
-  @FindBy(xpath = "//a[contains(text(),'New Company')]")
-  private WebElement hoverOverCompanies;
+    @FindBy(xpath = "//a[contains(text(),'New Company')]")
+    private WebElement clickOnNewCompany;
 
-
-
+    public void setClickOnNewCompany() {
+        clickFunction(clickOnNewCompany);
+    }
 
     @FindBy(xpath = "//input[@id='company_name']")
-    private WebElement enterCompanyName;
+    private WebElement enteringCompanyName;
 
-    public void enteringCompany(String name){sendKeys(enterCompanyName,name);}
+    public void enterCompanyName(String name){
+        sendKeys(enteringCompanyName,name);
+    }
 }
