@@ -4,9 +4,9 @@ Feature: Create New Contact
 
     Given Go to the CRM page
     Then Type the username and password and click on login button
-    Then Hover over on contacts and click on new contact
-    Then Enter contact details "<firstname>" and "<lastname>"
-    Then Click on save button
+    And Hover over on Contacts and click on New Contact
+    And Enter contact details "<firstname>" and "<lastname>"
+    And Click on save button
     Then Close the browser
 
     Examples:
