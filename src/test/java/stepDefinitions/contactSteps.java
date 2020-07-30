@@ -4,16 +4,11 @@ package stepDefinitions;
 import PageObjectModel.applicationPage;
 import PageObjectModel.contactsPage;
 import PageObjectModel.tabs;
-import PageObjectModel.logInPage;
+
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 
-import cucumber.api.java.en.Then;
-import utilities.Driver;
-import utilities.ReadProperties;
-
-import java.util.concurrent.TimeUnit;
 
 public class contactSteps {
 
@@ -23,7 +18,10 @@ public class contactSteps {
     contactsPage cp = new contactsPage();
     applicationPage ap = new applicationPage();
 
+    @Then("^Hover over on contacts and click on new contact$")
+    public void hover_over_on_contacts_and_click_on_new_contact() ] {
 
+    }
 
     @And("^Click on contacts$")
     public void click_on_contacts() {
@@ -36,7 +34,7 @@ public class contactSteps {
     public void enter_contact_details_and(String firstName, String lastName) throws Throwable {
     cp.enterFname(firstName);
     cp.enterLname(lastName);
-    Thread.sleep(2000);
+
     }
 
 
