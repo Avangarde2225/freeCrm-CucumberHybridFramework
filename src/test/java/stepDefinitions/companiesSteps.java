@@ -53,9 +53,9 @@ public class companiesSteps {
         cp.enterCompanyName(name);
     }
 
-    @Then("^Click on save button$")
+    @Then("^Click on the company save button$")
     public void click_on_save()  {
-        ap.setClickOnSave();
+        driver.findElement(By.xpath("//input[@id='company_name']")).click();
 
     }
 

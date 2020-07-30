@@ -15,15 +15,13 @@ public class contactsPage extends AbstractClass {
     }
 
 
-    @FindBy(xpath = "//input[@name='first_name']")
+    @FindBy(xpath = "//input[@id='first_name']")
     private WebElement enterFirstName;
     public void enterFname(String fName){sendKeys(enterFirstName,fName);}
 
-    @FindBy(xpath = "//input[@name='last_name']")
+    @FindBy(xpath = "//input[@id='surname']")
     private WebElement enterLastName;
     public void enterLname(String Lname){sendKeys(enterLastName,Lname);}
-
-
 
 
 

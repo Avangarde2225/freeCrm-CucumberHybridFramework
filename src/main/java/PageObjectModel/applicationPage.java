@@ -15,7 +15,7 @@ public class applicationPage extends AbstractClass{
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(xpath = "//tr[8]//td[1]//input[1]")
+    @FindBy(xpath = "//body/table/tbody/tr/td/table/tbody/tr/td/fieldset[@class='fieldset']/form[@id='contactForm']/table/tbody/tr/td/input[2]")
     private WebElement clickOnSave;
     public void setClickOnSave(){clickFunction(clickOnSave);}
 }
