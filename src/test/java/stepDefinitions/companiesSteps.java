@@ -15,7 +15,7 @@ public class companiesSteps {
     @Then("^Hover over on companies$")
     public void hover_over_on_companies() throws Throwable {
        Actions action = new Actions(driver);
-       action.moveToElement(driver.findElement(By.xpath("//a[contains(text(),'New Company')]"))).build().perform();
+       action.moveToElement(driver.findElement(By.xpath("//a[contains(text(),'Companies')]"))).build().perform();
 
     }
 

@@ -13,47 +13,41 @@ public class tabs extends AbstractClass{
         driver = Driver.getDriver();
         PageFactory.initElements(driver, this);
     }
-    @FindBy(xpath = "//span[contains(text(),'Companies')]")
+    @FindBy(xpath = "//a[contains(text(),'New Company')]")
     private WebElement clickOnCompanies;
     public void setClickOnCompanies(){clickFunction(clickOnCompanies);}
 
-    @FindBy(xpath = "//span[contains(text(),'Contacts')]")
+    @FindBy(xpath = "//a[contains(text(),'New Contact')]")
     private WebElement clickOnContacts;
     public void setClickOnContacts(){clickFunction(clickOnContacts);}
 
-
-
-    @FindBy(xpath = "//span[contains(text(),'Deals')]")
+    @FindBy(xpath = "//a[contains(text(),'New Deal')]")
     private WebElement clickOnDeals;
     public void setClickOnDeals(){clickFunction(clickOnDeals);}
 
-    @FindBy(xpath = "//span[contains(text(),'Tasks')]")
+    @FindBy(xpath = "//a[contains(text(),'New Task')]")
     private WebElement clickOnTasks;
     public void setClickOnTasks(){clickFunction(clickOnTasks);}
 
-    @FindBy(xpath = "//span[contains(text(),'Cases')]")
+    @FindBy(xpath = "//a[contains(text(),'New Case')]")
     private WebElement clickOnCases;
     public void setClickOnCases(){clickFunction(clickOnCases);}
 
-    @FindBy(xpath = "//span[contains(text(),'Calls')]")
+    @FindBy(xpath = "//a[contains(text(),'New Call')]")
     private WebElement clickOnCalls;
     public void setClickOnCalls(){clickFunction(clickOnCalls);}
 
-    @FindBy(xpath = "//span[contains(text(),'Documents')]")
-    private WebElement clickOnDocuments;
-    public void setClickOnDocuments(){clickFunction(clickOnDocuments);}
-
-    @FindBy(xpath = "//span[contains(text(),'Email')]")
+    @FindBy(xpath = "(//a[contains(text(),'New Email Campaign')])[1]")
     private WebElement clickOnEmail;
     public void setClickOnEmail(){clickFunction(clickOnEmail);}
 
-    @FindBy(xpath = "//span[contains(text(),'Campaigns')]")
-    private WebElement clickOnCampaigns;
-    public void setClickOnCampaigns(){clickFunction(clickOnCampaigns);}
+    @FindBy(xpath = "(//a[contains(text(),'New Text/SMS Campaign')])[1]")
+    private WebElement clickOnTextCampaigns;
+    public void setClickOnCampaigns(){clickFunction(clickOnTextCampaigns);}
 
-    @FindBy(xpath = "//span[contains(text(),'Forms')]")
-    private WebElement clickOnForms;
-    public void setClickOnForms(){clickFunction(clickOnForms);}
+    @FindBy(xpath = "(//a[contains(text(),'New Print Campaign')])[1]")
+    private WebElement clickOnPrintCampaign;
+    public void setClickOnPrintCampaign(){clickFunction(clickOnPrintCampaign);}
 
 
 }
