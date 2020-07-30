@@ -16,13 +16,6 @@ public class companiesPage extends AbstractClass {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[contains(text(),'New Company')]")
-    private WebElement clickOnNewCompany;
-
-    public void setClickOnNewCompany() {
-        clickFunction(clickOnNewCompany);
-    }
-
     @FindBy(xpath = "//input[@id='company_name']")
     private WebElement enteringCompanyName;
 
