@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
 
         tags = "@SmokeTest",
 
-        features = {"src/test/resources"},
+        features = {"src/test/resources/Features"},
         glue = {"stepDefinitions"},
         monochrome = true,
         dryRun = false
